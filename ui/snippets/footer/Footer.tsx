@@ -100,6 +100,9 @@ const Footer = () => {
           <NetworkAddToWallet/>
         </Flex>
         <Box mt={{ base: 5, lg: '44px' }}>
+          Powered By <Link fontSize="xs" href="https://twitter.com/NeoBase_Studios">NeoBase</Link>
+        </Box>
+        <Box mt={{ base: 5, lg: '44px' }}>
           <Link fontSize="xs" href="https://www.blockscout.com">blockscout.com</Link>
         </Box>
         <Text mt={ 3 } maxW={{ base: 'unset', lg: '470px' }} fontSize="xs">
