@@ -48,3 +48,5 @@ yarn-error.log*
 /playwright/envs.js
 
 **.dec**
+
+.idea
