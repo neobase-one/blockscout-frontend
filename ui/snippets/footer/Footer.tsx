@@ -99,9 +99,9 @@ const Footer = () => {
           { !config.UI.indexingAlert.isHidden && <IndexingAlertIntTxs/> }
           <NetworkAddToWallet/>
         </Flex>
-        <Box mt={{ base: 5, lg: '44px' }}>
+        <Text mt={ 3 } maxW={{ base: 'unset', lg: '470px' }} fontSize="xs">
           Powered By <Link fontSize="xs" href="https://twitter.com/NeoBase_Studios">NeoBase</Link>
-        </Box>
+        </Text>
         <Box mt={{ base: 5, lg: '44px' }}>
           <Link fontSize="xs" href="https://www.blockscout.com">blockscout.com</Link>
         </Box>
