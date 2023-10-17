@@ -99,14 +99,14 @@ const Footer = () => {
           { !config.UI.indexingAlert.isHidden && <IndexingAlertIntTxs/> }
           <NetworkAddToWallet/>
         </Flex>
-        <Text mt={ 3 } maxW={{ base: 'unset', lg: '470px' }} fontSize="xs">
-          Powered By <Link fontSize="xs" href="https://twitter.com/NeoBase_Studios">NeoBase</Link>
-        </Text>
         <Box mt={{ base: 5, lg: '44px' }}>
           <Link fontSize="xs" href="https://www.blockscout.com">blockscout.com</Link>
         </Box>
         <Text mt={ 3 } maxW={{ base: 'unset', lg: '470px' }} fontSize="xs">
             Blockscout is a tool for inspecting and analyzing EVM based blockchains. Blockchain explorer for Ethereum Networks.
+        </Text>
+        <Text mt={ 3 } maxW={{ base: 'unset', lg: '470px' }} fontSize="xs">
+          Powered By <Link fontSize="xs" href="https://twitter.com/NeoBase_Studios">NeoBase</Link>
         </Text>
         <VStack spacing={ 1 } mt={ 6 } alignItems="start">
           { apiVersionUrl && (
