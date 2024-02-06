@@ -4,7 +4,7 @@ import React from 'react';
 
 import eastArrowIcon from 'icons/arrows/east.svg';
 import useIsMobile from 'lib/hooks/useIsMobile';
-import BlankRasaBanner2 from 'ui/banner/BlankRasaBanner2';
+import BlankRasaBanner from 'ui/banner/BlankRasaBanner';
 import TextAd from 'ui/shared/ad/TextAd';
 import LinkInternal from 'ui/shared/LinkInternal';
 
@@ -92,7 +92,7 @@ const PageTitle = ({ title, contentAfter, withTextAd, backLink, className, isLoa
 
   return (
     <>
-      <BlankRasaBanner2/>
+      <BlankRasaBanner orientation="landscape"/>
       <Flex
         className={ className }
         mb={ 6 }
