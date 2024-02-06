@@ -94,7 +94,7 @@ const PageTitle = ({ title, contentAfter, withTextAd, backLink, className, isLoa
   return (
     <>
       <BlankRasaBanner block/>
-      <Flex className={ className } flexDir="column" rowGap={ 3 } mb={ 6 }>
+      <Flex className={ className } flexDir="column" rowGap={ 3 } mb={ 6 } mt={ 5 }>
         <Flex
           flexDir="row"
           flexWrap="wrap"
