@@ -2,6 +2,7 @@ import { Box, Heading, Flex, LightMode } from '@chakra-ui/react';
 import React from 'react';
 
 import config from 'configs/app';
+import BlankRasaBanner1 from 'ui/banner/BlankRasaBanner1';
 import ChainIndicators from 'ui/home/indicators/ChainIndicators';
 import LatestBlocks from 'ui/home/LatestBlocks';
 import Stats from 'ui/home/Stats';
@@ -40,7 +41,10 @@ const Home = () => {
         </LightMode>
       </Box>
       <Stats/>
-      <ChainIndicators/>
+      <Flex flexDirection={ [ 'column', 'row' ] } alignItems={ [ 'start' ] } gap={ 5 }>
+        <ChainIndicators/>
+        <BlankRasaBanner1/>
+      </Flex>
       <AdBanner mt={{ base: 6, lg: 8 }} mx="auto" display="flex" justifyContent="center"/>
       <Flex mt={ 8 } direction={{ base: 'column', lg: 'row' }} columnGap={ 12 } rowGap={ 8 }>
         <LatestBlocks/>
