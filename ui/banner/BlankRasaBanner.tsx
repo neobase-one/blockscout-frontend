@@ -10,7 +10,11 @@ import {
 } from '@chakra-ui/react';
 import React from 'react';
 
-const BlankRasaBanner = ({ orientation }: {orientation: string}) => {
+type IsCardProp = {
+  isCard?: boolean;
+};
+
+const BlankRasaBanner = ({ isCard = false }: IsCardProp) => {
   const bgColor = useColorModeValue('light', '#171717');
   const textColor = useColorModeValue('#616B74', 'gray.200');
   const btnColor = useColorModeValue('white', '#171717');
@@ -20,36 +24,32 @@ const BlankRasaBanner = ({ orientation }: {orientation: string}) => {
   );
   const imgInvertFilter = useColorModeValue('invert(0)', 'invert(1)');
 
-  const landscape = orientation === 'landscape';
-  const potrait = orientation === 'potrait';
-  const landscapeOrientationCondition = landscape && !potrait;
-
   return (
     <Box
       p={ 5 }
-      h={ landscapeOrientationCondition ? '' : '100%' }
-      w={ [ 'full', landscapeOrientationCondition ? '100%' : '40%' ] }
+      h={ !isCard ? '' : '100%' }
+      w={ [ 'full', !isCard ? '100%' : '40%' ] }
       bg={ bgColor }
       boxShadow={ bgBoxShadowDesktop }
       borderRadius="md"
       display="flex"
-      alignItems={ [ '', landscapeOrientationCondition ? 'center' : '' ] }
+      alignItems={ [ '', !isCard ? 'center' : '' ] }
       justifyContent="space-between"
-      flexDirection={ [ 'column', landscapeOrientationCondition ? 'row' : 'column' ] }
+      flexDirection={ [ 'column', !isCard ? 'row' : 'column' ] }
     >
       <Flex
-        flexDirection={ [ 'column', landscapeOrientationCondition ? 'row' : 'column' ] }
-        alignItems={ [ '', landscapeOrientationCondition ? 'center' : '' ] }
-        gap={ landscapeOrientationCondition ? 5 : 2 }
+        flexDirection={ [ 'column', !isCard ? 'row' : 'column' ] }
+        alignItems={ [ '', !isCard ? 'center' : '' ] }
+        gap={ !isCard ? 5 : 2 }
       >
         <Image
           src="/static/bank-rasa-logo.png"
-          w={ [ '90px', landscapeOrientationCondition ? '100px' : '90px' ] }
-          h={ [ '90px', landscapeOrientationCondition ? '100px' : '90px' ] }
+          w={ [ '90px', !isCard ? '100px' : '90px' ] }
+          h={ [ '90px', !isCard ? '100px' : '90px' ] }
           alt="blank-rasa-logo-loading..."
           filter={ imgInvertFilter }
         />
-        <Box w={ [ '100%', landscapeOrientationCondition ? '50%' : '100%' ] }>
+        <Box w={ [ '100%', !isCard ? '50%' : '100%' ] }>
           <Heading as="h2" size="md" mt={ 2 } mb={ 2 } fontWeight="bold">
             Blank Rasa
           </Heading>
@@ -71,7 +71,7 @@ const BlankRasaBanner = ({ orientation }: {orientation: string}) => {
           colorScheme="green.500"
           p={ 4 }
           mt={ 3 }
-          width={ [ '100%', landscapeOrientationCondition ? '270px' : '100%' ] }
+          width={ [ '100%', !isCard ? '270px' : '100%' ] }
           fontSize="sm"
           variant="outline"
           borderWidth="1.5px"

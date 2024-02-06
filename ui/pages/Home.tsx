@@ -43,7 +43,7 @@ const Home = () => {
       <Stats/>
       <Flex flexDirection={ [ 'column', 'row' ] } alignItems={ [ 'start' ] } gap={ 5 } pt={ 8 }>
         <ChainIndicators/>
-        <BlankRasaBanner orientation="potrait"/>
+        <BlankRasaBanner isCard={ true }/>
       </Flex>
       <AdBanner mt={{ base: 6, lg: 8 }} mx="auto" display="flex" justifyContent="center"/>
       <Flex mt={ 8 } direction={{ base: 'column', lg: 'row' }} columnGap={ 12 } rowGap={ 8 }>
