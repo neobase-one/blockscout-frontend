@@ -10,11 +10,11 @@ import {
 } from '@chakra-ui/react';
 import React from 'react';
 
-type IsCardProp = {
-  isCard?: boolean;
+type BlankRasaBannerProps = {
+  block?: boolean;
 };
 
-const BlankRasaBanner = ({ isCard = false }: IsCardProp) => {
+const BlankRasaBanner = ({ block }: BlankRasaBannerProps) => {
   const bgColor = useColorModeValue('light', '#171717');
   const textColor = useColorModeValue('#616B74', 'gray.200');
   const btnColor = useColorModeValue('white', '#171717');
@@ -27,29 +27,29 @@ const BlankRasaBanner = ({ isCard = false }: IsCardProp) => {
   return (
     <Box
       p={ 5 }
-      h={ !isCard ? '' : '100%' }
-      w={ [ 'full', !isCard ? '100%' : '40%' ] }
+      h={ block ? undefined : '100%' }
+      w={ [ 'full', block ? '100%' : '40%' ] }
       bg={ bgColor }
       boxShadow={ bgBoxShadowDesktop }
       borderRadius="md"
       display="flex"
-      alignItems={ [ '', !isCard ? 'center' : '' ] }
+      alignItems={ [ '', block ? 'center' : '' ] }
       justifyContent="space-between"
-      flexDirection={ [ 'column', !isCard ? 'row' : 'column' ] }
+      flexDirection={ [ 'column', block ? 'row' : 'column' ] }
     >
       <Flex
-        flexDirection={ [ 'column', !isCard ? 'row' : 'column' ] }
-        alignItems={ [ '', !isCard ? 'center' : '' ] }
-        gap={ !isCard ? 5 : 2 }
+        flexDirection={ [ 'column', block ? 'row' : 'column' ] }
+        alignItems={ [ '', block ? 'center' : '' ] }
+        gap={ block ? 5 : 2 }
       >
         <Image
           src="/static/bank-rasa-logo.png"
-          w={ [ '90px', !isCard ? '100px' : '90px' ] }
-          h={ [ '90px', !isCard ? '100px' : '90px' ] }
+          w={ [ '90px', block ? '100px' : '90px' ] }
+          h={ [ '90px', block ? '100px' : '90px' ] }
           alt="blank-rasa-logo-loading..."
           filter={ imgInvertFilter }
         />
-        <Box w={ [ '100%', !isCard ? '50%' : '100%' ] }>
+        <Box w={ [ '100%', block ? '50%' : '100%' ] }>
           <Heading as="h2" size="md" mt={ 2 } mb={ 2 } fontWeight="bold">
             Blank Rasa
           </Heading>
@@ -71,7 +71,7 @@ const BlankRasaBanner = ({ isCard = false }: IsCardProp) => {
           colorScheme="green.500"
           p={ 4 }
           mt={ 3 }
-          width={ [ '100%', !isCard ? '270px' : '100%' ] }
+          width={ [ '100%', block ? '270px' : '100%' ] }
           fontSize="sm"
           variant="outline"
           borderWidth="1.5px"
