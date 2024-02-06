@@ -41,7 +41,7 @@ const Home = () => {
         </LightMode>
       </Box>
       <Stats/>
-      <Flex flexDirection={ [ 'column', 'row' ] } alignItems={ [ 'start' ] } gap={ 7 } pt={ 8 }>
+      <Flex flexDirection={ [ 'column', 'row' ] } alignItems={ [ 'start' ] } gap={ 5 } pt={ 8 }>
         <ChainIndicators/>
         <BlankRasaBanner orientation="potrait"/>
       </Flex>
