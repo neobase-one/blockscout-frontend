@@ -16,7 +16,6 @@ type BlankRasaBannerProps = {
 
 const BlankRasaBanner = ({ block }: BlankRasaBannerProps) => {
   const bgColor = useColorModeValue('light', '#171717');
-  const textColor = useColorModeValue('#616B74', 'gray.200');
   const btnColor = useColorModeValue('white', '#171717');
   const bgBoxShadowDesktop = useColorModeValue(
     '0px 8px 16px -5px rgba(0, 0, 0, 0.10)',
@@ -49,26 +48,27 @@ const BlankRasaBanner = ({ block }: BlankRasaBannerProps) => {
           alt="blank-rasa-logo-loading..."
           filter={ imgInvertFilter }
         />
-        <Box w={ [ '100%', block ? '50%' : '100%' ] }>
-          <Heading as="h2" size="md" mt={ 2 } mb={ 2 } fontWeight="bold">
+        <Box >
+          <Heading as="h2" size="md" mt={ 2 } mb={ 2 } color="text" fontWeight="medium">
             Blank Rasa
           </Heading>
-          <Text fontSize="sm" color={ textColor }>
-            A platform for discovering and trading NFTs on Canto. Features
-            collections such as CantoLongneck, Shnoises and more
+          <Text fontSize="sm" color="text_secondary">
+          A platform for discovering and trading NFTs on Canto.
+          </Text>
+          <Text fontSize="sm" color="text_secondary">
+           Features collections such as Canto Longnecks, Shnoises, and more.
           </Text>
         </Box>
       </Flex>
       <Link href="https://www.blankrasa.com" isExternal>
         <Button
           bg="transparent"
-          color="green.500"
           _hover={{
-            bg: 'green.500',
+            bg: 'accent',
             color: btnColor,
           }}
           fontWeight="medium"
-          colorScheme="green.500"
+          colorScheme="accent"
           p={ 4 }
           mt={ 3 }
           width={ [ '100%', block ? '270px' : '100%' ] }
