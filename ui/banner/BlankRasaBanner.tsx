@@ -37,6 +37,7 @@ const BlankRasaBanner = ({ block }: BlankRasaBannerProps) => {
       flexDirection={ [ 'column', block ? 'row' : 'column' ] }
     >
       <Flex
+        flexGrow="1"
         flexDirection={ [ 'column', block ? 'row' : 'column' ] }
         alignItems={ [ '', block ? 'center' : '' ] }
         gap={ block ? 5 : 2 }
@@ -48,8 +49,8 @@ const BlankRasaBanner = ({ block }: BlankRasaBannerProps) => {
           alt="blank-rasa-logo-loading..."
           filter={ imgInvertFilter }
         />
-        <Box >
-          <Heading as="h2" size="md" mt={ 2 } mb={ 2 } color="text" fontWeight="medium">
+        <Box flexGrow="1">
+          <Heading as="h2" size="md" color="text" fontWeight="medium">
             Blank Rasa
           </Heading>
           <Text fontSize="sm" color="text_secondary">
@@ -59,26 +60,25 @@ const BlankRasaBanner = ({ block }: BlankRasaBannerProps) => {
            Features collections such as Canto Longnecks, Shnoises, and more.
           </Text>
         </Box>
-      </Flex>
-      <Link href="https://www.blankrasa.com" isExternal>
-        <Button
-          bg="transparent"
-          _hover={{
-            bg: 'accent',
-            color: btnColor,
-          }}
-          fontWeight="medium"
-          colorScheme="accent"
-          p={ 4 }
-          mt={ 3 }
-          width={ [ '100%', block ? '270px' : '100%' ] }
-          fontSize="sm"
-          variant="outline"
-          borderWidth="1.5px"
-        >
+        <Link href="https://www.blankrasa.com" isExternal>
+          <Button
+            bg="transparent"
+            _hover={{
+              bg: 'accent',
+              color: btnColor,
+            }}
+            fontWeight="medium"
+            colorScheme="accent"
+            p={ 4 }
+            width={ [ '100%', block ? '270px' : '100%' ] }
+            fontSize="sm"
+            variant="outline"
+            borderWidth="1.5px"
+          >
           Explore More
-        </Button>
-      </Link>
+          </Button>
+        </Link>
+      </Flex>
     </Box>
   );
 };
