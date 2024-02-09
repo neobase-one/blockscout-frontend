@@ -50,7 +50,7 @@ const BlankRasaBanner = ({ block }: BlankRasaBannerProps) => {
           filter={ imgInvertFilter }
         />
         <Box flexGrow="1">
-          <Heading as="h2" size="md" color="text" fontWeight="medium">
+          <Heading as="h2" size="md" mb={ 2 } color="text" fontWeight="medium">
             Blank Rasa
           </Heading>
           <Text fontSize="sm" color="text_secondary">
@@ -70,6 +70,7 @@ const BlankRasaBanner = ({ block }: BlankRasaBannerProps) => {
             fontWeight="medium"
             colorScheme="accent"
             p={ 4 }
+            mt={ block ? 0 : 3 }
             width={ [ '100%', block ? '270px' : '100%' ] }
             fontSize="sm"
             variant="outline"
